@@ -1,0 +1,20 @@
+{
+  "name": "growtwitter",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only ./src/index.ts",
+    "build": "tsc"
+  },
+  "author": "kelly cristine",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.6.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.2.2"
+  },
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

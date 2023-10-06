@@ -1,0 +1,270 @@
+Avaliação Final do Módulo
+Agora que entendemos um pouco mais sobre Typescript, Programação
+Orientada a Objetos e seus pilares, vamos avaliar o que aprendemos
+juntando tudo! O objetivo desta avaliação é verificar se atingimos os
+conhecimentos para avançar para o próximo módulo 💪.
+Cenário
+A Growdev decidiu inovar mais uma vez e irá lançar sua própria rede
+social estilo Twitter: o GrowTwitter. O objetivo desta ferramenta é permitir
+que usuários possam interagir com outros usuários através de algumas
+funcionalidades.
+
+Você será responsável por desenvolver a camada back-end do
+GrowTwitter usando as tecnologias que aprendemos no módulo:
+Typescript + POO e seus pilares 💻.
+
+Nesta camada, deverá ser possível cadastrar usuários. Cada usuário
+poderá criar tweets, seguir outros usuários (mecanismo de followers),
+além de curtir tweets de outros usuários e/ou respondê-los com tweets do
+tipo “reply”.
+
+Requisitos
+Para o desenvolvimento deste projeto será necessário:
+
+1. Criar um projeto Node.js com o Typescript configurado;
+2. Criar classes para representar as entidades necessárias;
+a. Cada classe deve estar em um arquivo separado.
+3. Usar todos os pilares da POO pelo menos uma vez;
+4. Estabelecer relacionamentos do tipo composição entre as classes;
+5. Armazenar os dados em um banco de dados em memória (listas).
+6. Para testes, criar pelo menos 3 usuários, 3 tweets, 3 likes e 3 replies.
+
+Propriedades
+Os usuários e tweets devem ser representados com pelo menos as
+seguintes propriedades:
+
+Classe Propriedades
+User ● Identificador único
+
+● Nome
+● E-mail
+● Username
+● Senha
+Tweet ● Identificador
+● Conteúdo
+● Tipo
+
+Features
+Realize o desenvolvimento das seguintes features para cumprir com os
+requisitos da avaliação:
+
+Feature #1 Cadastro de usuários
+
+Deve ser possível criar usuários na aplicação.
+Os campos ID e Username devem ser únicos por
+usuário, sendo que o ID pode ser gerado
+automaticamente pela aplicação.
+
+Feature #2 Cadastro de tweets
+
+Deve ser possível criar tweets por usuário. Cada
+usuário poderá criar N tweets e um tweet pertence a
+somente um usuário (relacionamento 0-N).
+
+O campo ID deve ser único e pode ser gerado
+automaticamente pela aplicação.
+Cada tweet possui um tipo obrigatório (normal ou
+reply).
+
+Feature #3 Exibição de tweets
+
+Deve ser possível exibir um tweet na aplicação. Como
+estamos no back-end, utilize o console.log( ).
+A exibição de um tweet deve ser feita da seguinte
+forma:
+
+@<username>: <conteúdo>
+
+<likes> *
+<replies> *
+
+Exemplo:
+
+* verificar features #7 e #8 para maiores
+informações sobre exibição de likes e replies.
+
+Feature #4 Followers
+
+Deve ser possível para um usuário seguir outro
+usuário, exceto a si mesmo.
+O usuário deve ter acesso a lista de usuário a quem
+segue.
+
+Feature #5 Like em tweets
+
+Deve ser possível para um usuário curtir os tweets de
+outros usuários.
+Um tweet (normal ou reply) pode ter 0 ou N curtidas.
+
+Feature #6 Reply em tweets
+
+Deve ser possível para um usuário responder a tweets
+de outros usuários.
+A resposta a um tweet deve ser um novo tweet com o
+tipo “reply”.
+
+Um tweet (normal ou reply) pode ter 0 ou N replies.
+
+Feature #7 Exibição de tweets com likes
+
+Deve ser possível exibir tweets com a informação de
+seus likes recebidos.
+
+@<username>: <conteúdo>
+
+<likes>
+
+A exibição dos likes varia dependendo da quantidade:
+● Sem like - não exibir.
+● 1 like – “@<username> curtiu”.
+● 2 ou + likes – “@<username1> e mais X
+usuários curtiram”.
+Exemplo:
+
+Feature #8 Exibição de tweets com replies
+
+Deve ser possível exibir tweets com os seus replies.
+
+@<username>: <conteúdo>
+
+<replies>
+
+Adicione um indicador ao início do reply para indicar
+que se trata de uma resposta (p.ex. o caractere “>”).
+
+@username: conteúdo do tweet original.
+> @username2: conteúdo do reply 1.
+> @username3: conteúdo do reply 2.
+
+Exemplo:
+
+Feature #9 Feed de tweets
+
+Um usuário poderá exibir o seu feed de tweets. O feed
+é composto por seus tweets e pelos tweets dos
+usuários a quem segue.
+Na exibição do feed, cada tweet deverá ser exibido
+conforme features anteriores: com seu conteúdo, seus
+likes e replies.
+Exemplo:
+
+Entrega
+O projeto desenvolvido deve ser postado em sua conta no GitHub e deve
+ser disponibilizado na tarefa da atividade final do módulo no Classroom o
+link para o repositório.
+
+Para que possamos construir uma base sólida de aprendizado é preciso
+praticar. Bora implementar tudo isso!
+
+Programação Orientada a Objetos
+Agora que entendemos um pouco mais
+sobre Typescript, Programação Orientada
+a Objetos e seus pilares, vamos avaliar o
+que aprendemos juntando tudo!
+O objetivo desta avaliação é verificar se
+atingimos os conhecimentos para avançar
+para o próximo módulo.
+
+O que vamos fazer?
+GrowTwitter
+Aplicação de rede social
+estilo twitter utilizando os
+conceitos de POO no
+Typescript.
+
+Vamos criar uma aplicação com as seguintes
+features:
+- Cadastro de usuários;
+- Cadastro de tweets por usuários;
+- Mecanismo de seguidores entre usuários;
+- Likes e replies em tweets.
+AVALIAÇÃO
+GrowTwitter - Requisitos
+
+Atenção! Os requisitos também estão postados em
+formato PDF no classroom.
+• Criar um projeto Node.js com
+Typescript.
+• Criar classes para as entidades
+necessárias.
+• Usar os pilares da POO.
+• Estabelecer relacionamentos do tipo
+composição.
+• Armazenar os dados em um banco de
+dados em memória (array).
+
+Informações
+
+● Dados de um usuário:
+○ Identificador
+○ Nome
+○ E-mail
+○ Username
+○ Senha
+
+● Dados de um tweet:
+○ Identificador
+○ Conteúdo
+○ Tipo
+
+Regras - Usuário
+Regras para objetos do tipo Usuário:
+- Devem ter id e username únicos.
+- Podem criar tweets.
+- Podem seguir outros usuários.
+- Podem curtir e responder (reply) tweets
+de outros usuários.
+- Podem visualizar os tweets dos usuários a
+quem seguem (estilo feed de tweets).
+
+Regras - Tweet
+Regras para objetos do tipo Tweet:
+- Devem ter id único.
+- Possui um tipo (normal ou reply).
+- Devem ser de apenas 1 usuário.
+- Podem conter likes e replies.
+- Podem ser exibidos conforme regra
+estabelecida (ver próximos slides).
+
+Regras - Follower
+Regras para a feature Follower:
+- Um usuário poderá seguir outro
+usuário.
+- O usuário que segue outro é chamado
+de Follower.
+- Um usuário poderá ser capaz de
+visualizar os tweets de quem está
+seguindo.
+
+Regras - Like e Reply
+Regras para as features Like e Reply:
+- Um usuário poderá responder a um
+Tweet específico com outro Tweet.
+- Um tweet reply conterá a propriedade
+tipo setada como “Reply”.
+- Um usuário poderá curtir um Tweet
+específico.
+- Um tweet pode ter zero ou vários likes
+e replies.
+
+Regras - Exibição dos Tweets
+Para exibir um tweet, use o console.log( ).
+A exibição de um tweet deve ser feita da
+seguinte forma:
+
+@<username>: <conteúdo>
+
+<likes>
+
+<replies>
+
+Regras gerais
+- Crie cada classe em um arquivo separado.
+- Faça o(s) arquivo(s) de banco de dados em
+arquivos separados.
+- Crie um arquivo de partida (index.ts) para a
+aplicação com testes das features desenvolvidas.
+- Crie pelo menos 3 usuários, 3 tweets, 3 likes e 3
+replies no banco de dados.
+
+
